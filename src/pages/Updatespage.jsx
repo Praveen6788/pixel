@@ -49,7 +49,7 @@ const Updatespage = () => {
           {Updates.map((member, index) => (
             <div
               key={index}
-              className='w-[80%] mx-auto h-[45%] my-5 border border-white rounded-md'
+              className='w-[80%] mx-auto h-[25%] my-5 border border-white rounded-md'
             >
               {/* Content goes here */}
             </div>
