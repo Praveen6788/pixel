@@ -4,7 +4,7 @@ import logo from "../assets/logo.svg"
 const Hero = () => {
   return (
     <>
-     <div className="w-full bg-black min-h-[90vh] flex flex-col lg:flex-row gap-20 p-6  md:gap-2 lg:p-20 text-white">
+     <div className="w-full bg-black min-h-[90vh] flex flex-col lg:flex-row gap-20 p-6  md:gap-2 lg:p-20 text-white ">
   
   {/* Left Section */}
   <div className="w-full lg:w-2/2   lg:py-20 flex  flex-col  gap-8">
