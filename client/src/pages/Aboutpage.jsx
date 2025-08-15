@@ -4,8 +4,8 @@ import Stats from '../components/Stats';
 import Values from '../components/Values';
 
 const Aboutpage = () => {
-  
-  
+
+
 
   return (
     <div className="bg-[url('https://www.transparenttextures.com/patterns/dark-mosaic.png')] bg-black bg-blend-overlay bg-cover text-white">
@@ -42,14 +42,14 @@ const Aboutpage = () => {
       </section>
 
       {/* BY THE NUMBERS */}
-      <Stats/>
-       
-       
-     
+      <Stats />
+
+
+
 
       {/* OUR VALUES */}
-      <Values/>
-      
+      <Values />
+
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react'
 import enthusiast from "../assets/enthusiast.png"
 import project from "../assets/project-management.png"
-import taskm from '../assets/task-management.png'
+
 import vision from "../assets/vision.png"
 import partner from "../assets/partners.png";
 const Values = () => {

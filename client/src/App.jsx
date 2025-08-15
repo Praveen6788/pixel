@@ -7,6 +7,7 @@ import Teampage from './pages/Teampage'
 import Gallerypage from './pages/Gallerypage'
 import Updatespage from './pages/Updatespage'
 import Admin from './pages/Admin'
+import Upload from './pages/Upload'
 
 function App() {
   const Router = createBrowserRouter(
@@ -19,6 +20,7 @@ function App() {
         <Route path="Gallery" element={<Gallerypage />} />
         <Route path="/update" element={<Updatespage />} />
         <Route path="/Admin" element={<Admin/>} />
+        <Route path="/upload" element={<Upload/>} />
         
 
 

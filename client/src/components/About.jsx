@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <section className="flex flex-col  px-6 md:px-10 py-6 gap-5 ">
+    <section className="flex flex-col  px-6 md:px-10 py-6 gap-5 mt-10 ">
             <h1 className="text-4xl md:text-3xl font-semibold  font-poppins ">ABOUT <span className='text-yellow-500 font-bold'>PIXEL</span></h1>
             <h2 className="text-lg md:text-xl max-w-2xl text-gray-400">
               Where Digital Art Meets Traditional Photography in the Heart of Innovation

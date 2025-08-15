@@ -57,7 +57,7 @@ const Teampage = () => {
   return (
     <div className='flex flex-col items-center justify-center text-center p-10 gap-12'>
       <div className='flex flex-col gap-6'>
-        <h1 className='text-6xl font-semibold'>TEAM MEMBERS</h1>
+        <h1 className='text-6xl font-semibold'>TEAM <span className='text-yellow-500'>MEMBERS</span></h1>
         <h1 className='text-gray-400 mt-3 text-2xl  '>
           Meet the  visionaries powering PIXEL's creative revolution at IARE
         </h1>
