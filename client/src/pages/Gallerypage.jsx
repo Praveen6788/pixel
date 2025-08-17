@@ -43,10 +43,10 @@ const Gallerypage = () => {
         GALLERY
       </h1>
 
-      <div className='grid grid-col-1 md:grid-cols-4 gap-20'>
+      <div className='grid grid-col-1 lg:grid-cols-3 md:grid-cols-3 gap-20'>
         {
           items.map((a,index)=> (
-            <div className=' w-[70vw] md:w-70 h-[25vh] md:h-50 boder border-1 rounded-md '>
+            <div className=' w-[70vw] md:w-70 h-100%  h-50 lg: boder border-1 rounded-md '>
               <img src={a.img}
                alt=""  key={index}/>
 

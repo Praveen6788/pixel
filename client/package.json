@@ -11,11 +11,14 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
+    "axios": "^1.11.0",
     "daisyui": "^5.0.46",
+    "dotenv": "^17.2.1",
     "lucide-react": "^0.525.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.7.0",
+    "react-spinners": "^0.17.0",
     "router": "^2.2.0"
   },
   "devDependencies": {

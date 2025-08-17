@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from "../assets/logo.svg";
+import logo from "../assets/pixels.png";
 import Stats from '../components/Stats';
 import Values from '../components/Values';
 

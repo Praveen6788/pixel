@@ -1,10 +1,10 @@
 import React from 'react'
-import logo from "../assets/logo.svg"
+import logo from "../assets/camm.png"
 
 const Hero = () => {
   return (
     <>
-     <div className="w-full bg-black min-h-[90vh] flex flex-col lg:flex-row gap-20 p-6  md:gap-2 lg:p-20 text-white ">
+     <div className="w-full bg-black min-h-[90vh] flex flex-col lg:flex-row gap-5 p-6  md:gap-2 lg:px-20  text-white ">
   
   {/* Left Section */}
   <div className="w-full lg:w-2/2   lg:py-20 flex  flex-col  gap-8">
@@ -23,10 +23,10 @@ const Hero = () => {
 
     <div className='flex  gap-8 flex-col '>
 
-      <h1 className='text-xl text-gray-50 text-opacity-50 leading-8 md:w-[65vh]'>
+      <h1 className='text-xl text-gray-50 text-opacity-50 leading-8 w-[90%] md:w-[65vh]'>
       Join IARE's premier photography club where creativity meets innovation. Capture, create, and connect with fellow visual storytellers in style.
     </h1>
-      <div className='flex gap-8'>
+      <div className='flex gap-8 w-[90%] text-center justift-center items-center'>
         <button className='border px-5 py-3 bg-yellow-500 text-black rounded-lg shadow text-lg font-semibold  '>
         Explore Gallery
 
@@ -46,8 +46,18 @@ const Hero = () => {
   </div>
 
   {/* Right Section */}
- <div className="w-full lg:w-2/3 max-h-[70vh] lg:p-20 border rounded-xl  backdrop-blur-md bg-gradient-to-r from-yellow-500/30 via-purple-500/20 to-black-500/30">
-  <img src={logo} alt="" className="rounded-full" />
+ <div className="w-90 md:w-full  lg:w-5/7 h-[70vh]  rounded-xl backdrop-blur-md flex justify-center items-center p-10 md:p-0  ">
+  <div
+    className="h-[100%] w-[100%]  md:h-[120%] md:w-[120%]"
+    style={{
+      backgroundImage: `url(${logo})`,
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center'
+    }}
+  >
+    {/* Optional content inside */}
+  </div>
 </div>
 
 
