@@ -32,7 +32,7 @@
         return (
             <section className="flex flex-col items-center px-6 md:px-20 py-20">
                 <h2 className="text-3xl md:text-4xl text-center mb-10 font-semibold">BY THE NUMBERS</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-20 w-full mt-10">
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-20 w-full mt-10">
                     {stats.map((stat, index) => (
                         <div key={index} className="flex flex-col items-center text-center justify-center gap-2">
                             { <img src={stat.img} alt={stat.label} className="w-14 h-14" />}

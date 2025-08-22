@@ -41,13 +41,13 @@ const Updates = ({ updates }) => {
   if (location.pathname === "/home" || location.pathname === "/") {
     
     return (
-      <section className="h-[62vh] p-10">
+      <section className="h-[62vh] p-8">
       <h1 className="text-3xl md:text-3xl mb-5 font-semibold text-start">
         Recent Updates
       </h1>
 
-      <div className="h-[80%] md:h-[90%] w-full border-white overflow-auto md:overflow-hidden">
-        <div className="flex md:grid md:grid-rows-1 flex-col md:grid-flow-col md:gap-20 overflow-x-auto wrap scroll-hidden">
+      <div className="h-[100%] md:h-[90%]   border-white overflow-auto md:overflow-hidden">
+        <div className="flex   md:grid md:grid-rows-1 flex-col md:grid-flow-col md:gap-20 overflow-x-auto wrap scroll-hidden">
           {k.map((member, index) => (
             <div
               key={index}

@@ -1,10 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "../assets/logo.svg";
+import logo from "../assets/pixels.png"
+import { useLocation } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar({isAuthenticated}) {
   const [isOpen, setIsOpen] = useState(false);
+   const a= isAuthenticated
+
+  // const location =useLocation()
+
+
+  
 
   return (
     <nav className="bg-black bg-opacity-50 shadow-md w-full z-30 min-h-[10vh] border-gray-50  border-b-1 border-opacity-10">
@@ -16,12 +23,29 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8 text-white text-xl ">
-          <Link to="/home">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/gallery">Gallery</Link>
-          <Link to="/team">Team</Link>
-          <Link to="/update">Updates</Link>
-        </div>
+  {a ? (
+    <>
+    <Link to="/home">Home</Link>
+      <Link to="/about">About</Link>
+      <Link to="/updateteam">Update Team</Link>
+      <Link to="/upload">upload</Link>
+      <Link to="/uploadupdates">upload updates</Link>
+      
+      
+    </>
+  ) : (
+    <>
+     <Link to="/home">Home</Link>
+      <Link to="/about">About</Link>
+      <Link to="/gallery">Gallery</Link>
+      <Link to="/team">Team</Link>
+      <Link to="/update">Updates</Link>
+      
+    </>
+   
+  )}
+</div>
+
 
         {/* Mobile Toggle Button */}
         <div className="md:hidden">
