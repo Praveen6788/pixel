@@ -46,14 +46,16 @@ const Hero = () => {
   </div>
 
   {/* Right Section */}
- <div className="w-90 md:w-full  lg:w-5/7 h-[70vh]  rounded-xl backdrop-blur-md flex justify-center items-center p-10 md:p-0  ">
+ <div className="w-90 md:w-full  lg:w-5/7 h-[70vh]  rounded-xl backdrop-blur-md flex justify-center items-center   p-0 md:p-0  ">
   <div
-    className="h-[100%] w-[100%]  md:h-[120%] md:w-[120%]"
+    className="h-[100%] w-[100%] md:h-[120%] md:w-[120%] "
     style={{
       backgroundImage: `url(${logo})`,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center'
+      backgroundPosition: 'center',
+    
+      
     }}
   >
     {/* Optional content inside */}
