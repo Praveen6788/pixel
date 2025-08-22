@@ -1,26 +1,26 @@
 const express = require("express");
-const mongoos = require("mongoose");
-
+const connectdb = require("./config/db");
 const dotenv = require("dotenv");
+const cors = require("cors");
+const adminroute = require("./Routes/adminroute")
+const uploadRoute = require("./Routes/upload"); // ✅ Correct path and name
+const teamroute =require("./Routes/teamupdate")
+const updateroute =require("./Routes/updateroute")
 dotenv.config();
 
 const app = express();
 
+app.use(cors());
+app.use(express.json());
 
-const a = async () => {
-  try {
-    const conn = await mongoos.connect(process.env.MANGO_URI);
-    if (conn) {
-      console.log("MongoDB connected successfully");
-    }
-  } catch (error) {
-    console.error("MongoDB connection error:", error);
-  }
-};
+app.use("/api/image", uploadRoute); // ✅ Mount the route
+app.use("/api/team",teamroute); // ✅ Mount the route
+app.use("/api/admin",adminroute)
+app.use("/api/updates",updateroute)
 
-a()
+const PORT = process.env.PORT || 5000;
 
-
-app.listen(process.env.PORT, () => {
-  console.log("running sucessfully ");
+app.listen(PORT, () => {
+  connectdb();
+  console.log(`Server running on port ${PORT}`);
 });
