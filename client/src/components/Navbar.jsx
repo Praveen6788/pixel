@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "../assets/pixels.png"
+import logo from "../assets/pixels.jpg"
 import { useLocation } from "react-router-dom";
 
 export default function Navbar({isAuthenticated}) {

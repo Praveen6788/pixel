@@ -7,18 +7,18 @@ const Updatespage = () => {
   const [updates, setUpdates] = useState([]); // ✅ start with empty array
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // useEffect(() => {
-  //   axios
-  //     .get(`${import.meta.env.VITE_BACKEND_BASE_URL}/api/updates`)
-  //     .then((res) => {
-  //       console.log("Successfully fetched", res.data);
-  //       const data = res.data.data; // backend returns { success, data }
-  //       setUpdates(data || []); // ✅ fallback to [] if undefined
-  //     })
-  //     .catch((err) => {
-  //       console.log("Error fetching:", err);
-  //     });
-  // }, []);
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_BASE_URL}/api/updates`)
+      .then((res) => {
+        console.log("Successfully fetched", res.data);
+        const data = res.data.data; // backend returns { success, data }
+        setUpdates(data || []); // ✅ fallback to [] if undefined
+      })
+      .catch((err) => {
+        console.log("Error fetching:", err);
+      });
+  }, []);
 
   // auto slider effect
   useEffect(() => {

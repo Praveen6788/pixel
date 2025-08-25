@@ -73,6 +73,12 @@ const handlesubmit = async (e) => {
         data:finalData
       });
 
+      setFormData({  name: '',
+    imgUrl: null,
+    position: '',
+    branch: '',
+    })
+
     
 
   } catch (e) {

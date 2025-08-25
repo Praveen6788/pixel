@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from "../assets/pixels.png";
+import logo from "../assets/pixels.jpg";
 import Stats from '../components/Stats';
 import Values from '../components/Values';
 
