@@ -57,7 +57,7 @@ export default function Navbar({isAuthenticated}) {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
+      {isOpen  && (
         <div className="md:hidden flex flex-col items-center gap-4 py-4 text-black font-semibold text-lg bg-gray-50 ">
           <Link to="/home" onClick={() => setIsOpen(false)}>Home</Link>
           <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>

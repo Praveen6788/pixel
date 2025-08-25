@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -17,18 +18,12 @@ const Footer = () => {
       <div className='flex  gap-10'>
           
         <div className='hover:bg-gray-50 hover:text-black p-2 rounded-md border border-white'>
-          <h1>
-            JOIN PIXEL
-          </h1>
-          <img src="
-          " alt="" />
+          
+          <Link to="https://docs.google.com/forms/d/e/1FAIpQLSdQe5rgAMbLQxr7GCiTTkA-c9T3F8B1aDKxeUkmg5J_6gOsLw/viewform?fbclid=PAZXh0bgNhZW0CMTEAAadytjxkyP7Vbj8IhMcZGqAVmu68f3RN9EOtlTdP7oIammiq26uMjzRIGIWpvA_aem_JIsLZVrv_ncjvmzTYPczNA  ">Join Now</Link>
+          
         </div>
         <div className='hover:bg-yellow-500  hover:text-black p-2 rounded-md border border-white ' >
-          <h1>
-            CONTACT US
-          </h1>
-          <img src="
-          " alt="" />
+          <Link to="https://www.instagram.com/pixels.iare?igsh=MXlweTBrYmgzdGZk">Contact Us</Link>
         </div>
       </div>
       
