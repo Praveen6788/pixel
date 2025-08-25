@@ -40,11 +40,11 @@ const Gallerypage = () => {
         </div>
       </div>
 
-      <div className='text-end w-full px-6 mt-6'>
+      {gallery.length >6 && <div className='text-end w-full px-6 mt-6'>
         <button className='bg-white px-4 py-2 rounded-md text-black shadow'>
           Load more
         </button>
-      </div>
+      </div>}
     </>
   )
 }

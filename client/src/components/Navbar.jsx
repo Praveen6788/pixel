@@ -40,6 +40,7 @@ export default function Navbar({isAuthenticated}) {
       <Link to="/gallery">Gallery</Link>
       <Link to="/team">Team</Link>
       <Link to="/update">Updates</Link>
+      <Link to="/admin">Admin</Link>
       
     </>
    
