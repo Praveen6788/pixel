@@ -1,11 +1,12 @@
 const express = require("express");
 const { createteam } = require("../controllers/teamupdate");
+const { fetchteam } = require("../controllers/fetchteam");
 
 const router = express.Router();
 
 // Route to create a new team member
 router.post("/", createteam);
-
+router.get("/",fetchteam)
 module.exports = router;
 
 
