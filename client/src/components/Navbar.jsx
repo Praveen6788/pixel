@@ -64,6 +64,7 @@ export default function Navbar({isAuthenticated}) {
           <Link to="/gallery" onClick={() => setIsOpen(false)}>Gallery</Link>
           <Link to="/team" onClick={() => setIsOpen(false)}>Team</Link>
           <Link to="/update" onClick={() => setIsOpen(false)}>Updates</Link>
+          <Link to="/admin" onClick={() => setIsOpen(false)}>Admin</Link>
         </div>
       )}
     </nav>
