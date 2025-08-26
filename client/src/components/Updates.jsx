@@ -29,8 +29,8 @@ const Updates = () => {
 
     return (
       <section className="h-[62vh] p-8">
-        <h1 className="text-3xl md:text-3xl mb-5 font-semibold text-start">
-          Recent Updates
+        <h1 className="text-3xl md:text-3xl mb-5 font-semibold text-start uppercase">
+          Recent  <span className='text-yellow-500'>Updates</span>
         </h1>
 
         <div className="h-[100%] md:h-[90%]   border-white overflow-auto md:overflow-hidden">

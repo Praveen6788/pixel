@@ -19,7 +19,7 @@ const Aboutpage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-10 w-full">
           {/* Left Column */}
           <div>
-            <h2 className="text-3xl mb-5 text-start font-semibold">OUR STORY</h2>
+            <h2 className="text-3xl mb-5 text-start font-semibold">OUR <span className='text-yellow-500'>STORY</span></h2>
             <p className="text-base leading-relaxed text-start text-gray-300">
               PIXEL is the premier photography club of the Institute of Aeronautical Engineering (IARE), where creativity meets technology in the most spectacular way possible.
               <br /><br />

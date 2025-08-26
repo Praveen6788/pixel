@@ -10,9 +10,9 @@ const About = () => {
     
               <div>
                 
-                <p className="text-base md:leading-5.5 leading-relaxed text-start text-gray-300">
+                <p className="text-base md:text-xl   leading-relaxed text-start text-gray-500">
                   PIXEL is the premier photography club of the Institute of Aeronautical Engineering (IARE), where creativity meets technology in the most spectacular way possible.
-              
+                  {}
                   Founded with a vision to revolutionize visual storytelling, we've created a cyberpunk haven where traditional photography techniques blend seamlessly with cutting-edge digital art forms. Our community thrives on the intersection of analog beauty and digital innovation.
                  
                   From capturing the raw essence of campus life to creating mind-bending digital masterpieces, PIXEL has become the creative powerhouse that pushes the boundaries of what's possible with a camera and imagination.

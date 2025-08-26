@@ -15,10 +15,14 @@ export default function Navbar({isAuthenticated}) {
 
   return (
     <nav className="bg-black bg-opacity-50 shadow-md w-full z-30 min-h-[10vh] border-gray-50  border-b-1 border-opacity-10">
-      <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+      <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-2 ">
         {/* Logo */}
         <div className="flex items-center">
+          <Link to="/home" className="flex justify-center text-center items-center">
           <img src={logo} alt="Logo" className="w-10 h-10 rounded-full object-cover" />
+          
+          <h1 className="p-2 text-xl md:text-2xl font-bold "><span className="text-yellow-500">PIXEL</span> IARE</h1></Link>
+          
         </div>
 
         {/* Desktop Menu */}
