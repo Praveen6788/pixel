@@ -4,7 +4,7 @@
     import Activemember from "../assets/team.png"
     import cam from "../assets/cam.png"
 
-
+import "animate.css"
     const Stats = () => {
         const stats = [
             {
@@ -34,8 +34,8 @@
                 <h2 className="text-3xl md:text-4xl text-center mb-10 font-semibold">BY THE  <span className='text-yellow-500'> NUMBERS</span></h2>
                 <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-20 w-full mt-10">
                     {stats.map((stat, index) => (
-                        <div key={index} className="flex flex-col items-center text-center justify-center gap-2">
-                            { <img src={stat.img} alt={stat.label} className="w-14 h-14" />}
+                        <div key={index}    className="flex flex-col items-center text-center justify-center gap-2 ">
+                            { <img src={stat.img} alt={stat.label} className="w-14 h-14 " />}
                             <h3 className="text-4xl font-semibold">{stat.count}</h3>
                             <p className="text-base md:text-xl text-gray-300 min-width-content  ">{stat.label}</p>
                         </div>

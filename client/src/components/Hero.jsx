@@ -2,6 +2,7 @@ import React from 'react'
 import logo from "../assets/camm.png"
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+import 'animate.css';
 const Hero = () => {
   const Navigate =useNavigate()
   return (
@@ -11,11 +12,11 @@ const Hero = () => {
   {/* Left Section */}
   <div className="w-full lg:w-2/2   lg:py-20 flex  flex-col  gap-8 ">
     <div>
-      <h1 className="text-3xl lg:text-7xl font-bold font-Poppins ">WELCOME TO</h1>
-    <h1 className='text-4xl lg:text-7xl font-bold font-Poppins text-yellow-500'>
+      <h1 className="text-3xl lg:text-7xl font-bold font-Poppins animate__animated animate__bounceInDown animate__delay-0 ">WELCOME TO</h1>
+    <h1 className='text-4xl lg:text-7xl font-bold font-Poppins text-yellow-500 animate__animated animate__bounceInUp animate__slow-2s animate__delay-0.5s animate__slow'>
       PIXEL 
     </h1>
-    <h1 className='text-4xl lg:text-7xl font-bold font-Poppins '>
+    <h1 className='text-4xl lg:text-7xl font-bold font-Poppins animate__animated animate__bounceInLeft animate__delay-1s animate__slow'>
       PHOTOGRAPHY</h1>
 
     </div>
@@ -52,7 +53,7 @@ const Hero = () => {
   {/* Right Section */}
  <div className="w-90 md:w-full  lg:w-5/7 h-[70vh]  rounded-xl backdrop-blur-md flex justify-center items-center   p-0 md:p-0  ">
   <div
-    className="h-[100%] w-[100%] md:h-[120%] md:w-[120%] "
+    className="h-[100%] w-[100%] md:h-[120%] md:w-[120%] animate__animated animate__tada animate__delay-3s animate__slow animate__duration-5s"
     style={{
       backgroundImage: `url(${logo})`,
       backgroundSize: 'cover',

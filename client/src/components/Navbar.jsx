@@ -4,6 +4,8 @@ import { Menu, X } from "lucide-react";
 import logo from "../assets/pixels.jpg"
 import { useLocation } from "react-router-dom";
 
+import 'animate.css';
+
 export default function Navbar({isAuthenticated}) {
   const [isOpen, setIsOpen] = useState(false);
    const a= isAuthenticated
@@ -21,7 +23,7 @@ export default function Navbar({isAuthenticated}) {
           <Link to="/home" className="flex justify-center text-center items-center">
           <img src={logo} alt="Logo" className="w-10 h-10 rounded-full object-cover" />
           
-          <h1 className="p-2 text-xl md:text-2xl font-bold "><span className="text-yellow-500">PIXEL</span> IARE</h1></Link>
+          <h1 className="p-2 text-xl md:text-2xl font-bold animate__animated     animate__zoomInDown animate__delay-4s animate__slow "><span className="text-yellow-500 ">PIXEL</span> IARE</h1></Link>
           
         </div>
 
