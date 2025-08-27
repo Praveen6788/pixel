@@ -2,7 +2,7 @@ import React from 'react';
 import logo from "../assets/pixels.jpg";
 import Stats from '../components/Stats';
 import Values from '../components/Values';
-
+import "animate.css"
 const Aboutpage = () => {
 
 
@@ -33,7 +33,11 @@ const Aboutpage = () => {
 
           {/* Right Column */}
           <div className="flex flex-col items-center justify-center gap-6">
-            <img src={logo} alt="Logo" className="w-64 h-64 rounded-full" />
+            <img
+              src={logo}
+              alt="Logo"
+              className="w-64 h-64 rounded-full animate__animated animate__rotateIn animate__delay-4d    animate__slower "
+            />
             <p className="text-xl max-w-md leading-relaxed text-center text-gray-300">
               Established as the official photography club of Institute of Aeronautical Engineering, fostering creativity and technical excellence since our inception.
             </p>

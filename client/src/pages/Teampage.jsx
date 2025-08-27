@@ -1,61 +1,86 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from '../components/Card';
-import { useEffect,useState } from 'react';
-import axios from "axios"
+import axios from "axios";
+import "animate.css";
 
 const Teampage = () => {
-  const[data,setdata]=useState([])
- useEffect(() => {
-  console.log("Base URL:", import.meta.env.VITE_BACKEND_BASE_URL);
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  axios
-    .get(`${import.meta.env.VITE_BACKEND_BASE_URL}/api/team`)
-    .then((res) => {
-      console.log("API success:", res.data.data);
-      setdata(res.data.data );
-    })
-    .catch((err) => {
-      console.error("API error:", err.response ? err.response.data : err.message);
-    });
-}, []);
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_BASE_URL}/api/team`)
+      .then((res) => {
+        setData(res.data.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("API error:", err.response ? err.response.data : err.message);
+      });
+  }, []);
 
-
-
-
-  
-  // const a = data.slice(0,2)
-  // const b =data.slice(2)
   return (
-    <div className='flex flex-col items-center justify-center text-center p-10 gap-6'>
-      <div className='flex flex-col gap-3'>
-        <h1 className='text-6xl font-semibold'>TEAM <span className='text-yellow-500'>MEMBERS</span></h1>
-        <h1 className='text-gray-400 mt-0 text-2xl  '>
-          Meet the  visionaries powering PIXEL's creative revolution at IARE
+    <div className="flex flex-col items-center text-center p-10 gap-10">
+      {/* Page Header */}
+      <div className="flex flex-col gap-3">
+        <h1 className="text-5xl md:text-6xl font-bold">
+          TEAM <span className="text-yellow-500">MEMBERS</span>
         </h1>
+        <h2 className="text-gray-400 text-lg md:text-2xl max-w-content mx-auto">
+          Meet the visionaries powering PIXEL's creative revolution at IARE
+        </h2>
       </div>
 
-      <div >
-        <h1 className='text-4xl font-semibold '>LEADERSHIP COUNCIL</h1>
-        <div className='grid grid-col-1 md:grid-cols-2  place-items-center gap-x-50 gap-y-30 py-25 '>
-          {data.map((member, index) => (
-            <Card key={index} carddetails={member} />
-          ))}
+      {/* Leadership Council */}
+      <section className="w-full">
+        <h2 className="text-3xl font-semibold mb-8">LEADERSHIP COUNCIL</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2   gap-y-30 md:gap-10 place-items-center py-10">
+          {loading
+            ? Array.from({ length: 2 }).map((_, index) => (
+                <div
+                  key={index}
+                  className="w-[60vw] h-[80vw] md:w-[18vw] md:h-[18vw] 
+                             rounded-md bg-[rgba(0,0,0,0.16)] backdrop-blur-[100px] 
+                             animate-pulse border border-gray-700 flex flex-col items-center justify-center p-4"
+                >
+                  {/* Skeleton Avatar */}
+                  <div className="w-20 h-20 md:w-24 md:h-24 bg-gray-700 rounded-full mb-4 animate__animated animate__flash animate__slower animate__infinite" ></div>
+                  {/* Skeleton Text */}
+                  <div className="w-3/4 h-4 bg-gray-600 rounded mb-2 animate__animated animate__fadeIn animate__infinite  animate__fast  "></div>
+                  <div className="w-1/2 h-4 bg-gray-600 rounded"></div>
+                </div>
+              ))
+            : data.map((member, index) => (
+                <Card key={index} carddetails={member} />
+              ))}
         </div>
+      </section>
 
-
-        <h1 className='text-4xl font-semibold mt-8'>CORE TEAM</h1>
-
-
-        <div className='grid grid-col-1 md:grid-cols-3 place-items-center gap-x-50 gap-y-15 py-25'>
-          {data.map((member, index) => (
-            <Card key={index} carddetails={member} />
-          ))}
+      {/* Core Team */}
+      <section className="w-full mt-20 p-10">
+        <h2 className="text-3xl font-semibold mb-8">CORE <span className="text-yellow-500">TEAM</span></h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-30 place-items-center p-20">
+          {loading
+            ? Array.from({ length: 3 }).map((_, index) => (
+                <div
+                  key={index}
+                  className="w-[60vw] h-[80vw] md:w-[18vw] md:h-[18vw] 
+                             rounded-md bg-[rgba(0,0,0,0.16)] backdrop-blur-[100px] 
+                             animate-pulse border border-gray-700 flex flex-col items-center justify-center p-4"
+                >
+                  {/* Skeleton Avatar */}
+                  <div className="w-20 h-20 md:w-24 md:h-24 bg-gray-700 rounded-full mb-4 animate__animated animate__flash animate__slower animate__infinite" ></div>
+                  {/* Skeleton Text */}
+                  <div className="w-3/4 h-4 bg-gray-600 rounded mb-2 animate__animated animate__fadeIn animate__infinite  animate__fast "></div>
+                  <div className="w-1/2 h-4 bg-gray-600 rounded"></div>
+                </div>
+              ))
+              
+            : data.map((member, index) => (
+                <Card key={index} carddetails={member} />
+              ))}
         </div>
-
-      </div>
-
-
-
+      </section>
     </div>
   );
 };

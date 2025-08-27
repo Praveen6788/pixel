@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
-
+import "animate.css"
 const Gallerypage = () => {
   const [gallery, setGallery] = useState([])
+  const[loading,setloading]=useState(true)
 
   useEffect(() => {
     axios.get(`${import.meta.env.VITE_BACKEND_BASE_URL}/api/image`)
       .then((res) => {
         console.log("API success:", res.data.data);
-        setGallery(res.data.data || []);  // ✅ since response is already an array
+        setGallery(res.data.data || []);  
+        setloading(false)// ✅ since response is already an array
       })
       .catch((err) => {
         console.log("Error fetching images:", err);
@@ -23,11 +25,20 @@ const Gallerypage = () => {
         </h1>
 
         <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10'>
-          {
+          { loading ?
+            Array.from({length:3}).map((_, index) => (
+               <div
+    key={index}
+    className="w-[70vw] md:w-90 h-[280px] border rounded-md overflow-hidden bg-gray-700"
+  >
+    {/* Skeleton placeholder with Animate.css flash */}
+    <div className="w-full h-full bg-gray-900 animate__animated animate__flash animate__infinite animate__slow"></div>
+  </div>
+            )) : 
             gallery.map((a, index) => (
               <div 
                 key={a._id || index} 
-                className='w-[70vw] md:w-72 h-[300px] border rounded-md overflow-hidden'
+                className='w-[70vw] md:w-72 h-[280px] border rounded-md overflow-hidden'
               >
                 <img 
                   src={a.imgUrl} 
