@@ -1,10 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import {motion} from "motion/react"
+import { inView } from 'motion/react'
 
 const Footer = () => {
   return (
     <>
-    <div className='p-10 md:p-15 flex flex-col justify-center items-center gap-8'>
+    <motion.div className='p-10 md:p-15 flex flex-col justify-center items-center gap-8'
+    
+
+    initial={{opacity:0,y:-20}}
+    whileInView={{opacity:1,y:0}}
+    transition={{duration:3,ease:"easeIn"}}
+    viewport={{once:true ,amount:0.2}}
+    
+    
+    >
       <h1 className='text-2xl md:text-5xl font-bold min-w-content text-center '>
         BECOME A <span className='text-yellow-500'>PIXEL</span> PIONEER
       </h1>
@@ -27,7 +38,7 @@ const Footer = () => {
         </div>
       </div>
       
-    </div>
+    </motion.div>
     </>
   )
 }

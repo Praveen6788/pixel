@@ -1,11 +1,12 @@
 import React from 'react'
 import enthusiast from "../assets/enthusiast.png"
 import project from "../assets/project-management.png"
-
+import { motion } from 'motion/react'
+import { inView } from 'motion/react'
 import vision from "../assets/vision.png"
 import partner from "../assets/partners.png";
 const Values = () => {
-    const values = [
+  const values = [
     {
       title: "Visual Excellence",
       description:
@@ -16,7 +17,7 @@ const Values = () => {
       title: "Community First",
       description:
         "Building a supportive environment where photographers of all levels can learn, grow, and inspire each other.",
-      img:partner ,
+      img: partner,
     },
     {
       title: "Innovation",
@@ -28,16 +29,24 @@ const Values = () => {
       title: "Passion Driven",
       description:
         "Every click, every frame, every pixel is driven by our collective passion for the art of photography.",
-      img:enthusiast,
+      img: enthusiast,
     },
   ];
   return (
     <>
-    <section className="px-10 md:px-20 py-20 ">
+      <motion.section className="px-10 md:px-20 py-20 "
+        initial={{ opacity: 0, y: 50 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <h2 className="text-3xl md:text-4xl text-center mb-22 font-semibold">OUR <span className='text-yellow-500'>VALUES</span> </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-30 md:gap-40">
-             {values.map((value, index) => (
-            <div key={index} className="flex items-start gap-5">
+          {values.map((value, index) => (
+            <motion.div key={index} className="flex items-start gap-5" initial={{ opacity: 0, y: 50 }}
+              transition={{ duration: 0.6, delay: index*0.1, ease: "easeInOut" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true,  }}>
               <img src={value.img} alt={value.title} className="w-16 h-16" />
               <div className="flex flex-col gap-2">
                 <h3 className="text-3xl font-semibold text-white">{value.title}</h3>
@@ -45,13 +54,13 @@ const Values = () => {
                   {value.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
-          
-          
+
+
         </div>
-      </section>
-   
+      </motion.section>
+
     </>
   )
 }

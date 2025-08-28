@@ -3,6 +3,8 @@ import logo from "../assets/pixels.jpg";
 import Stats from '../components/Stats';
 import Values from '../components/Values';
 import "animate.css"
+import {motion, scale} from "motion/react"
+import { inView } from 'motion/react';
 const Aboutpage = () => {
 
 
@@ -32,11 +34,15 @@ const Aboutpage = () => {
           </div>
 
           {/* Right Column */}
-          <div className="flex flex-col items-center justify-center gap-6">
-            <img
+          <div className="flex flex-col items-center justify-center gap-6 ">
+            <motion.img
               src={logo}
               alt="Logo"
-              className="w-64 h-64 rounded-full animate__animated animate__rotateIn animate__delay-4d    animate__slower "
+              className="w-64 h-64 rounded-full  "
+              transition={{duration:2 ,delay:1 ,ease:"easeInOut"}}
+              initial={{opacity:0.2,scale:0.8}}
+              whileInView={{opacity:1,y:-20,rotate:[0,360],scale:1}}
+              viewport={{once:true ,amount:0.3}}
             />
             <p className="text-xl max-w-md leading-relaxed text-center text-gray-300">
               Established as the official photography club of Institute of Aeronautical Engineering, fostering creativity and technical excellence since our inception.
