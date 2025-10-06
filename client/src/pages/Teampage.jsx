@@ -50,7 +50,7 @@ const Teampage = () => {
                   <div className="w-1/2 h-4 bg-gray-600 rounded"></div>
                 </div>
               ))
-            : data.map((member, index) => (
+            : data.slice(0,2).map((member, index) => (
                 <Card key={index} carddetails={member} />
               ))}
         </div>
@@ -76,7 +76,7 @@ const Teampage = () => {
                 </div>
               ))
               
-            : data.map((member, index) => (
+            : data.slice(2,data.length).map((member, index) => (
                 <Card key={index} carddetails={member} />
               ))}
         </div>

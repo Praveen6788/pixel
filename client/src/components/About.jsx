@@ -6,8 +6,8 @@ const About = () => {
     <motion.section className="flex flex-col  px-6 md:px-10 py-6 gap-5 mt-10 "
      initial={{opacity:0,y:50}}
      whileInView={{opacity:1,y:0}}
-     transition={{duration:2,ease:"anticipate"}}
-     viewport={{once:true,amount:0.05}}
+     transition={{duration:1,ease:"anticipate"}}
+     viewport={{once:true,amount:0.1}}
     
     >
             <h1 className="text-4xl md:text-3xl font-semibold  font-poppins ">ABOUT <span className='text-yellow-500 font-bold'>PIXEL</span></h1>

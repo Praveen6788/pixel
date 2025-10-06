@@ -12,11 +12,11 @@ const Hero = () => {
         {/* Left Section */}
         <div className="w-full lg:w-2/2   lg:py-20 flex  flex-col  gap-8 ">
           <div>
-            <h1 className="text-3xl lg:text-7xl font-bold font-Poppins animate__animated animate__bounceInDown animate__delay-0 ">WELCOME TO</h1>
-            <h1 className='text-4xl lg:text-7xl font-bold font-Poppins text-yellow-500 animate__animated animate__bounceInUp animate__slow-2s animate__delay-0.5s animate__slow'>
+            <h1 className="text-3xl lg:text-7xl font-bold font-Poppins ">WELCOME TO</h1>
+            <h1 className='text-4xl lg:text-7xl font-bold font-Poppins text-yellow-500 '>
               PIXEL
             </h1>
-            <h1 className='text-4xl lg:text-7xl font-bold font-Poppins animate__animated animate__bounceInLeft animate__delay-1s animate__slow'>
+            <h1 className='text-4xl lg:text-7xl font-bold font-Poppins '>
               PHOTOGRAPHY</h1>
 
           </div>
